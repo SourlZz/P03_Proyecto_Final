@@ -1,0 +1,103 @@
+body {
+	margin: 0;
+	background-color: transparent;
+	color: #fff;
+	font-family: Monospace;
+	font-size: 13px;
+	line-height: 24px;
+	overscroll-behavior: none;
+}
+
+a {
+	color: #00f;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+button {
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+#info {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: left;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #fff; /* Cambiado a blanco */
+}
+
+#info-content {
+	display: block; /* Agregado para controlar la visibilidad */
+}
+
+#info-toggle {
+	position: absolute; /* Agregado para controlar la visibilidad */
+	top: 5px; /* Ajusta la posición del botón */
+	right: 5px; /* Ajusta la posición del botón */
+	color: #00f; /* Cambia el color del botón a azul */
+	cursor: pointer;
+}
+
+#info-toggle:hover {
+	text-decoration: underline;
+}
+
+#info-toggle.minimized #info-content {
+	display: none; /* Oculta el contenido cuando está minimizado */
+}
+
+a, button, input, select {
+	pointer-events: auto;
+}
+
+.dg.ac {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index: 2 !important;
+}
+
+#overlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.7);
+}
+
+#overlay button {
+	background: #ffffff;
+	border: 0;
+	color: #000000;
+	padding: 16px 20px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#notSupported {
+	width: 50%;
+	margin: auto;
+	background-color: #f00;
+	margin-top: 20px;
+	padding: 10px;
+}

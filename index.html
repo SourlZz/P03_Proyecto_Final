@@ -1,0 +1,73 @@
+<!-- Proyecto realizado para la materia de Animación por computadora -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animación por Computadora</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <style>
+        body {
+            color: #222;
+        }
+
+        a {
+            color: #2fa1d6;
+        }
+
+        p {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 2em;
+        }
+
+        #info {
+            position: relative;
+        }
+
+        #info-toggle {
+            background: none;
+            border: none;
+            color: #2fa1d6;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 1;
+            padding: 0;
+            margin: 0;
+            outline: none;
+        }
+
+        #info-content {
+            display: block;
+        }
+
+        #info.minimized #info-content {
+            display: none;
+        }
+    </style>
+    <script type="module" src="./main.js"></script>
+</head>
+
+<body>
+    <div id="info">
+        <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> webgl - skinning and blending<br/>
+        <!-- cuadrado que pone la información del pryecto -->
+        <p id="info-content">
+            Este proyecto implementa animaciones por ciclos y capturas de movimiento, con un peronsaje modelado de bajo poligono
+			para usarlo solo selecciona una de las opciones de animación y procederá a hacer la animación 
+        </p>
+        Modelado por:
+        <a href="https://github.com/" target="_blank" rel="noopener">Ian Uriel Sánchez Alvarado y Angel Vadir Rojano Islas</a><br/>
+        Programado por: <a href="#" target="_blank" rel="noopener">Ian Uriel Sánchez Alvarado y Angel Vadir Rojano Islas<br/>
+        <button id="info-toggle" onclick="toggleInfo()">-</button>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            var info = document.getElementById('info');
+            info.classList.toggle('minimized');
+        }
+    </script>
+</body>
+</html>
