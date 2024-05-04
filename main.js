@@ -3,7 +3,6 @@ import Stats from './src/jsm/libs/stats.module.js';
 import { GUI } from './src/jsm/libs/dat.gui.module.js';
 import { OrbitControls } from './src/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from './src/jsm/loaders/GLTFLoader.js';
-import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.1/three.module.js';
 let container, stats, clock, gui, mixer, actions, activeAction, previousAction;
 let camera, scene, renderer, model;
 
@@ -57,7 +56,7 @@ function init() {
     scene.add(grid);
 
     const loader = new GLTFLoader();
-    loader.load('./src/models/gltf/D1.glb', function(gltf) {
+    loader.load('./src/models/gltf/D2.glb', function(gltf) {
         model = gltf.scene;
         scene.add(model);
         createGUI(model, gltf.animations);
@@ -90,7 +89,7 @@ function init() {
 }
 
 function createGUI(model, animations) {
-    const ciclos = ['Staying Alive', 'Rodar', 'oscioso', 'Saltar', 'Caminar'];
+    const ciclos = ['Staying Alive', 'Caminar', 'Saltar', 'Rodar', 'Ocioso'];
     const capturas = ['Guardia', 'Mirar atras', 'Baile', 'Arco', 'Huida'];
 
     gui = new GUI();
@@ -136,7 +135,7 @@ function createGUI(model, animations) {
     }
     capturaFolder.open();
 
-    activeAction = actions['Caminar'];
+    activeAction = actions['Staying Alive'];
     activeAction.play();
 }
 
